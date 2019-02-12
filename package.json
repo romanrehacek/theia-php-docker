@@ -1,0 +1,34 @@
+{
+    "private": true,
+    "dependencies": {
+        "@theia/core": "next",
+        "@theia/editor": "next",
+        "@theia/editorconfig": "next",
+        "@theia/file-search": "next",
+        "@theia/filesystem": "next",
+        "@theia/git": "next",
+        "@theia/json": "next",
+        "@theia/keymaps": "next",
+        "@theia/languages": "next",
+        "@theia/markers": "next",
+        "@theia/merge-conflicts": "next",
+        "@theia/messages": "next",
+        "@theia/mini-browser": "next",
+        "@theia/monaco": "next",
+        "@theia/navigator": "next",
+        "@theia/outline-view": "next",
+        "@theia/php": "next",
+        "@theia/output": "next",
+        "@theia/preferences": "next",
+        "@theia/process": "next",
+        "@theia/search-in-workspace": "next",
+        "@theia/task": "next",
+        "@theia/terminal": "next",
+        "@theia/textmate-grammars": "next",
+        "@theia/userstorage": "next",
+        "@theia/workspace": "next"
+    },
+    "devDependencies": {
+        "@theia/cli": "next"
+    }
+}
