@@ -1,6 +1,7 @@
 {
     "private": true,
     "dependencies": {
+        "typescript": "latest",
         "@theia/core": "next",
         "@theia/editor": "next",
         "@theia/editorconfig": "next",
@@ -25,6 +26,8 @@
         "@theia/task": "next",
         "@theia/terminal": "next",
         "@theia/textmate-grammars": "next",
+        "@theia/tslint": "next",
+        "@theia/typescript": "next",
         "@theia/userstorage": "next",
         "@theia/workspace": "next"
     },
