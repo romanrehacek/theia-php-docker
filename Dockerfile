@@ -1,6 +1,9 @@
 FROM node:8-jessie-slim
 
 ENV TZ=Europe/Bratislava
+ENV UID=1001
+ENV GID=1001
+
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
     && apt-get update && apt-get -y --no-install-recommends install curl xz-utils wget git python build-essential \
     && apt install -y --no-install-recommends ca-certificates apt-transport-https \
@@ -14,7 +17,8 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
     && rm composer-setup.php \
     && rm -rf /var/lib/apt/lists/*
 
-RUN adduser --disabled-password --gecos '' theia \
+RUN addgroup --gid $GID theia \
+    && adduser --disabled-password --gecos '' --uid $UID --gid $GID theia \
     && adduser theia sudo \
     && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers \
     && chmod g+rw /home \
