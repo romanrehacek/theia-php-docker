@@ -1,11 +1,11 @@
 FROM node:8-jessie-slim
 
 ENV TZ=Europe/Bratislava
-ENV UID=1001
-ENV GID=1001
+ENV UID=10000
+ENV GID=1002
 
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
-    && apt-get update && apt-get -y --no-install-recommends install curl xz-utils wget git python build-essential \
+    && apt-get update && apt-get -y --no-install-recommends install sudo curl xz-utils wget git python build-essential \
     && apt install -y --no-install-recommends ca-certificates apt-transport-https \
     && wget -q https://packages.sury.org/php/apt.gpg -O- | apt-key add - \
     && echo "deb https://packages.sury.org/php/ jessie main" | tee /etc/apt/sources.list.d/php.list \
